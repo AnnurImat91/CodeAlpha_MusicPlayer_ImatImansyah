@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Player</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <button id="menuToggle">☰</button>
+        <div class="container">
+            <div class="sidebar">
+                <h2>Your Library</h2>
+                <ul class="song-list" id="playlist">
+                    <!-- Songs will be added here dynamically -->
+                </ul>
+            </div>
+            <div class="main-content">
+                <h1>Now Playing</h1>
+                <div class="now-playing" id="nowPlaying">
+                    <!-- Current song info will be displayed here -->
+                </div>
+            </div>
+        </div>
+        <div class="player">
+            <div class="song-info">
+                <img id="currentCover" src="/api/placeholder/56/56" alt="Cover"
+                    class="cover-image">
+                <div class="song-details">
+                    <span id="currentTitle" class="song-title">Select a
+                        song</span>
+                    <span id="currentArtist" class="song-artist">Artist</span>
+                </div>
+            </div>
+            <div class="controls">
+                <div class="control-buttons">
+                    <button id="shuffleBtn"><i class="fa-solid fa-shuffle"></i></button>
+                    <button id="prevBtn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="playPauseBtn"><i class="fa-solid fa-play"></i></button>
+                    <button id="nextBtn"><i
+                            class="fa-sharp fa-solid fa-forward-step"></i></button>
+                    <button id="repeatBtn"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="currentTime">0:00</span>
+                    <div class="progress" id="progressContainer">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="volume-control">
+                <button id="muteBtn"><i class="fa-solid fa-volume-high"></i></button>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1"
+                    value="1">
+                <button id="fullscreenBtn">⛶</button>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
